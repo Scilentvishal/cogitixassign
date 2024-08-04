@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
+import Card from "@/components/Home/Card";
 import { communication } from "@/constants/APICall/Comminication";
 import Pagination from "@/components/Home/Pagination";
-import Card from "@/components/Home/Card";
 
 const Home = () => {
   const [characterData, setCharacterData] = useState([]);

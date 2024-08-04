@@ -1,10 +1,10 @@
 "use client";
-import { communication } from "@/constants/APICall/Comminication";
 import { useContext, useEffect, useState } from "react";
 import style from "./SideNavigation.module.css";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { ThemeContext } from "@/constants/ContextApi";
+import { communication } from "@/constants/APICall/Comminication";
 
 const SideNavigation = () => {
   const [episodeData, setEpisodeData] = useState([]);
