@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import SideNavigation from "@/components/Navbar/SideNavigation";
+import Hamburger from "@/components/Navbar/Hamburger";
+import ContextProvider from "@/constants/ContextApi";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,14 +15,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="relative">
-          <SideNavigation />
-          <div className="lg:ml-[300px] md:ml-[270px] ml-[220px] p-4">
-            <h3 className="text-2xl text-center my-4">Rick & Morty Characters</h3>
-            {/* This margin-left value should match the width of SideNavigation */}
-            {children}
+        <ContextProvider>
+          <div className="relative">
+            <SideNavigation />
+            <div className="lg:ml-[300px] md:ml-[270px] ml-0 sm:p-4 p-2">
+              <Hamburger />
+              <h3 className="text-2xl text-center my-4">
+                Rick & Morty Characters
+              </h3>
+              {children}
+            </div>
           </div>
-        </div>
+        </ContextProvider>
       </body>
     </html>
   );

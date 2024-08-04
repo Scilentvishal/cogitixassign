@@ -3,7 +3,7 @@ import style from "./Card.module.css";
 
 const Card = ({ data }) => {
   return (
-    <div className={`h-48 rounded-md relative align-middle items-center ${style.card}`}>
+    <div className={`sm:h-48 h-28 rounded-md relative align-middle items-center shadow-2xl w-full ${style.card}`}>
       <div className={style.Charname}>
         {data?.name}
       </div>

@@ -52,7 +52,8 @@ const Home = () => {
           <p>Loading...</p> // Loading state
         ) : (
           <>
-            <div className="grid xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-3 justify-center text-center sm:grid-cols-2 gap-3">
+            <div className="grid xl:grid-cols-6 lg:grid-cols-5 sm:grid-cols-3 justify-center text-center grid-cols-2 sm:gap-3 gap-2 w-full">
+              {/* sasas */}
               {characterData.length > 0 ? (
                 characterData.map((data, i) => (
                  <Card data={data} key={i} />
