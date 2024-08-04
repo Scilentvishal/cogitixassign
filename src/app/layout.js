@@ -3,6 +3,7 @@ import "./globals.css";
 import Hamburger from "../components/Navbar/Hamburger";
 import SideNavigation from "../components/Navbar/SideNavigation";
 import ContextProvider from "../constants/ContextApi";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <ContextProvider>
+          <Suspense>
           <div className="relative">
             <SideNavigation />
             <div className="lg:ml-[300px] md:ml-[270px] ml-0 sm:p-4 p-2">
@@ -26,6 +28,7 @@ export default function RootLayout({ children }) {
               {children}
             </div>
           </div>
+          </Suspense>
         </ContextProvider>
       </body>
     </html>
