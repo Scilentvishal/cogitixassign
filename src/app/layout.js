@@ -1,8 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import SideNavigation from "@/components/Navbar/SideNavigation";
-import Hamburger from "@/components/Navbar/Hamburger";
-import ContextProvider from "@/constants/ContextApi";
+import Hamburger from "../components/Navbar/Hamburger";
+import SideNavigation from "../components/Navbar/SideNavigation";
+import ContextProvider from "../constants/ContextApi";
 
 const inter = Inter({ subsets: ["latin"] });
 

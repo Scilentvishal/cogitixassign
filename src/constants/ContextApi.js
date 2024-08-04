@@ -15,7 +15,7 @@ const ContextProvider = ({children}) => {
   }
   return (
     <ThemeContext.Provider value={{ openNav, closeNav, nav}}>
-        <div>{children}</div>
+        {children}
     </ThemeContext.Provider>
   )
 }

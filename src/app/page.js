@@ -1,10 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import Card from "@/components/Home/Card";
-import { communication } from "@/constants/APICall/Comminication";
-import Pagination from "@/components/Home/Pagination";
+import { communication } from "../constants/communication";
+import Card from "../components/Home/Card"
+import Pagination from "../components/Home/Pagination.jsx"
 
 const Home = () => {
   const [characterData, setCharacterData] = useState([]);

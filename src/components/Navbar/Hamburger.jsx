@@ -1,6 +1,7 @@
 "use client"
-import { ThemeContext } from "@/constants/ContextApi";
+
 import { useContext } from "react";
+import { ThemeContext } from "../../constants/ContextApi";
 
 const Hamburger = () => {
     const { openNav, closeNav, nav } = useContext(ThemeContext);
